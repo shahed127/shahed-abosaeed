@@ -281,7 +281,13 @@ def main():
     game = Game(new_state)
     playType=input("if you want to solve it enter 'alon' , to let the program solve it enter 'solve it' ")
     if playType=="solve it":
-        game.bfs()
+        algo=input("by witch algorithm?? 'DFS','BFS'")
+        if algo=="BFS":
+            print("by BFS:")
+            game.bfs()
+        if algo=="DFS":
+            print("by DFS:")
+            game.dfs()
     elif playType=="alon":
         while True:
             magnet_type = input("Enter magnet type to move (R for Red, P for Purple, Q to quit): ")
